@@ -10,7 +10,7 @@ public class Post {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	private String user;
+	private String username;
 	private String content; 
 	private String timeStamp;
 	
@@ -20,11 +20,11 @@ public class Post {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getUser() {
-		return user;
+	public String getUsername() {
+		return username;
 	}
-	public void setUser(String user) {
-		this.user = user;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public String getContent() {
 		return content;

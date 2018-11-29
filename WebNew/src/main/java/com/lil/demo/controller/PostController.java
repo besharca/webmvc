@@ -47,7 +47,7 @@ public class PostController {
 		}else { 
 			if(p.getContent().length()<1000) {
 				p.setTimeStamp(LocalDateTime.now().format(DateTimeFormatter.ofPattern("hh:mm  dd MMMM, YYYY")));
-				p.setUser(request.getSession().getAttribute("login").toString());
+				p.setUsername(request.getSession().getAttribute("login").toString());
 				posts.save(p);
 				mv.addObject("status", "posted");
 			}else {
