@@ -12,9 +12,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
-	<c:if test="${sessionScope.login!=null}">
-				<c:redirect url="http://localhost:8080/new/main"/>
-	</c:if>
+	<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+		<c:if test="${sessionScope.login!=null}">
+					<c:redirect url="${contextPath}/new/main"/>
+		</c:if>
 	
 	<header>
 		<%@include file="/views/home/TopBorder.jsp" %>

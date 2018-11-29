@@ -13,6 +13,8 @@
 <title></title>
 </head>
 <body>
+	<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
 <header>
 	<%@include file="/views/home/TopBorder.jsp" %> 
 </header>
@@ -33,7 +35,7 @@
 	</div> <!-- End div chat room -->
 	<div id="postComment">
 		<textarea rows="5" cols="5" name="content" form="txt" placeholder="Add comment">${comment}</textarea>
-		<form  action="/new/main" method="post" id="txt"> 
+		<form  action="${contextPath}/new/main" method="post" id="txt"> 
 			<input id="postButton"  type="submit"  value="Post">  
 						<c:if test="${sessionScope.login==null}">
 							You must <span class="mustLogin"><a href="login">login</a></span> before posting!

@@ -23,7 +23,7 @@
 	
 		<div class="form">
 			<c:if test="${sessionScope.login!=null}">
-				<form action="http://localhost:8080/new/pictures" method="post" enctype="multipart/form-data">
+				<form action="${contextPath}/new/pictures" method="post" enctype="multipart/form-data">
 				  	Upload image file <br/> 
 					  <input id="field" type="file" name="pikture" accept="image/*">  
 					  <input type="submit" value="upload"> ${uploadStatus} 

@@ -44,12 +44,12 @@ public class UserRegistrationListener implements ApplicationListener<Registratio
 	 	createEmailMessage(final RegistrationEvent event, final UserModel user, final String token,final HttpServletRequest request) { 
 	        final String recipientAddress = user.getEmail();
 	        final String subject = "Registration Confirmation";
-	        final String confirmationUrl = "http://localhost:8080/activateAccount/" + token;
+	        final String confirmationUrl = ServletUriComponentsBuilder.fromContextPath(request).path("/").build()+"/activateAccount/" + token;
 	        final String message = "Please click the following link to successfully validate your email : ";
 	        final SimpleMailMessage email = new SimpleMailMessage();
 	        email.setTo(recipientAddress);
 	        email.setSubject(subject);
-	        email.setText(message + " \r\n" + confirmationUrl +"\r\n"+ServletUriComponentsBuilder.fromContextPath(request).path("/").build());
+	        email.setText(message + " \r\n" + confirmationUrl +"\r\n");
 	        email.setFrom("springbootak47@gmail.com");
 	        return email;
 	        
