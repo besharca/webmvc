@@ -19,8 +19,8 @@ import com.lil.demo.interceptors.TimeLog;
 @org.springframework.context.annotation.Configuration
 public class Configuration implements WebMvcConfigurer{
 	
-	@Autowired
-	private ErrorAttributes errorAttributes;
+	/*@Autowired
+	private ErrorAttributes errorAttributes;*/
 
 	@Bean
 	public CommonsMultipartResolver multipartResolver(){
@@ -39,10 +39,10 @@ public class Configuration implements WebMvcConfigurer{
         		.addResourceLocations("classpath:static/**");
     }
     
-    @Bean
+   /* @Bean
     public AppErrorController appErrorController() {
     	return new AppErrorController(this.errorAttributes);
-    }
+    }*/
     
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
