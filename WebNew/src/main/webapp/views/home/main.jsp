@@ -28,7 +28,7 @@
 				</li> 
 			<c:forEach items="${comments}" var="comment">
 				<li><div class="comment" ><div class="message"><p> ${comment.content} </p>
-					  </div><div class="userComment">Posted on ${comment.timeStamp} <br/>${comment.user}</div></div>
+					  </div><div class="userComment">Posted on ${comment.timeStamp} <br/>${comment.username}</div></div>
 				</li>
 			</c:forEach>	
 	 
