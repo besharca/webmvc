@@ -6,9 +6,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css"><%@include file="/views/home/style.css" %>
-				
-</style>
+	<style type="text/css">
+		<%@include file="/views/home/style.css" %>			
+	</style>
+	
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title></title>
 </head>
