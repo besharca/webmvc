@@ -13,9 +13,9 @@
 </head>
 <body>
 	<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
-		<c:if test="${sessionScope.login!=null}">
-					<c:redirect url="${contextPath}/new/main"/>
-		</c:if>
+	<c:if test="${sessionScope.login!=null}">
+				<c:redirect url="${contextPath}/new/main"/>
+	</c:if>
 	
 	<header>
 		<%@include file="/views/home/TopBorder.jsp" %>

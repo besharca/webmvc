@@ -13,38 +13,27 @@
 </head>
 <body>
 	<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
-		<c:if test="${sessionScope.login!=null}">
-					<c:redirect url="${contextPath}/new/main"/>
-		</c:if>
+	<c:if test="${sessionScope.login!=null}">
+				<c:redirect url="${contextPath}/new/main"/>
+	</c:if>
 	
 	<header>
 		<%@include file="/views/home/TopBorder.jsp" %>
 	</header>
 	
 	<div class="formBox">
-		<form action="login" method="post">
+		<form action="recovery" method="post">
 			
 			<div class="containerLogin"> 
 			  <div class="form-wrapper">
-			  	<input type="text" class="form-control" placeholder="Enter Username" name="uname" required>
+			  	<input type="text" class="form-control" placeholder="Enter Email" name="recoveryEmail" required>
 			  </div> 
 			  
-			  <div class="form-wrapper">
-			  	<input type="password" placeholder="Enter Password" name="psw" required>
-			  </div>
-			  
 			  <div>
-			  	<button type="submit" id="registerButton">Login</button>
+			  	<button type="submit" id="registerButton">Recover</button>
 			  </div>
-			  
-			  <div class="forgotPw">
-				  <label>
-				    <input type="checkbox" checked="checked" name="remember"> Remember me
-				  </label>
-			  	<span class="psw" >Forgot <a href="${contextPath}/new/recovery" class="anchorForgotPw" >password</a> ?</span>
-			  </div>
-			  <p id="loginStatus">${loginStatus}</p>
-			</div>
+			  <p id="registerStatus">${status}</p>
+			</div> <!--end loginContainer div-->
 	 
 		</form>
 	</div>

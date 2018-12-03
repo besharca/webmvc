@@ -37,7 +37,8 @@ public class RegistrationController {
 		
 		if(bindingResult.hasErrors()) {
 			mv.addObject("userReturn", user);
-			mv.addObject("status", bindingResult.getAllErrors().get(0).getDefaultMessage()); 
+			mv.addObject("status", bindingResult.getAllErrors().get(0).getDefaultMessage());
+			System.out.println(bindingResult.getAllErrors().get(0).getDefaultMessage());
 			return mv;
 		}
 		

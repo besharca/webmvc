@@ -26,7 +26,7 @@ public class UserModel {
 	@Pattern(message="{username.error}" , regexp="^(?=.{4,12}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$")
 	private String username;
 	
-	@Email(message="Invalid Email format") @Size(max=45, message="Email max length is {max}")
+	@Email @Size(max=45, message="Email max length is {max}")
 	private String email;
 	
 	@NotBlank(message="{gender.notblank}")

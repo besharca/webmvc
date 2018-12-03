@@ -14,9 +14,8 @@
 <title></title>
 </head>
 <body>
-	<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 	<c:if test="${sessionScope.login!=null}">
-		 <c:redirect url="${contextPath}/new/main"/>
+		 <c:redirect url="http://localhost:8080/new/main"/>
 	</c:if>
 
 <header>
