@@ -74,8 +74,6 @@ public class UserRecoveryController {
 				return mv;
 			}
 			
-			
-			
 			mailSender.send(this.createEmailMessage(user,newPassword,request));;
 			
 			return mv;
